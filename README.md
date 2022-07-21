@@ -1,3 +1,1 @@
-# lucrare_licenta
-# lucrare_licenta
-# proiect-licenta
+Chrome extension used for analyse a Facebook post web page. This application returns the text of the post and the text of comments analyzed and extracts the reactions from the post to the end, dividing both the comments and the post into well-intentioned or ill-intentioned.
