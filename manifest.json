@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Aplicație web pentru analiza unei pagini de tip postare de Facebook",
+    "version": "0.1.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "application.png"
+    },
+    "background.service_worker": {
+        "scripts": ["index.js", "extractDescription.js", "extractComments", "nlp.js"],
+    	"persistent": false
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://www.facebook.com/*/posts/*"
+    ],
+    "content_scripts": [
+        {
+        "matches": ["https://www.facebook.com/*/posts/*"],
+        "js": ["index.js", "extractDescription.js", "extractComments.js", "nlp.js"]
+        }
+    ]
+    
+}
